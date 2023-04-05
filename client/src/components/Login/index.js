@@ -5,12 +5,14 @@ import {
   TouchableOpacity,
   TextInput,
   TouchableWithoutFeedback,
+  Image,
 } from 'react-native';
 import React, {useState} from 'react';
 import axios from 'axios';
 import {baseURL} from '../../Services/apiClient';
 import {useDispatch} from 'react-redux';
 import {setUser} from '../../redux/Actions/auth';
+import Logo from '../../../assets/logo.png';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -36,8 +38,8 @@ const Login = ({navigation}) => {
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#141414'}}>
-      <View>
-        <Text
+      <View style={{alignItems: 'center'}}>
+        {/* <Text
           style={{
             color: 'white',
             fontSize: 28,
@@ -45,7 +47,8 @@ const Login = ({navigation}) => {
             textAlign: 'center',
           }}>
           FARM-WING
-        </Text>
+        </Text> */}
+        <Image source={Logo} style={{width: 80, height: 50, marginTop: 30}} />
       </View>
       <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
         <View
